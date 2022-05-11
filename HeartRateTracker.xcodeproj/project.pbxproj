@@ -9,21 +9,35 @@
 /* Begin PBXBuildFile section */
 		D50FABB8282BA3C100EC206D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50FABB7282BA3C100EC206D /* AppDelegate.swift */; };
 		D50FABBA282BA3C100EC206D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50FABB9282BA3C100EC206D /* SceneDelegate.swift */; };
-		D50FABBC282BA3C100EC206D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50FABBB282BA3C100EC206D /* ViewController.swift */; };
+		D50FABBC282BA3C100EC206D /* TrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50FABBB282BA3C100EC206D /* TrainingViewController.swift */; };
 		D50FABBF282BA3C100EC206D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D50FABBD282BA3C100EC206D /* Main.storyboard */; };
 		D50FABC1282BA3C200EC206D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D50FABC0282BA3C200EC206D /* Assets.xcassets */; };
 		D50FABC4282BA3C200EC206D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D50FABC2282BA3C200EC206D /* LaunchScreen.storyboard */; };
+		D50FABCC282BA48500EC206D /* BluetothManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50FABCB282BA48500EC206D /* BluetothManager.swift */; };
+		D50FABCE282BA4BA00EC206D /* BluetoothConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50FABCD282BA4BA00EC206D /* BluetoothConstants.swift */; };
+		D50FABD0282BA50B00EC206D /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50FABCF282BA50B00EC206D /* Router.swift */; };
+		D50FABD2282BA56600EC206D /* AssemblyBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50FABD1282BA56600EC206D /* AssemblyBuilder.swift */; };
+		D50FABD4282BA5A700EC206D /* TrainingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50FABD3282BA5A700EC206D /* TrainingModel.swift */; };
+		D50FABD6282BA5BE00EC206D /* TrainingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50FABD5282BA5BE00EC206D /* TrainingViewModel.swift */; };
+		D50FABDB282BA8C000EC206D /* RouterProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50FABDA282BA8C000EC206D /* RouterProtocols.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D50FABB4282BA3C100EC206D /* HeartRateTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeartRateTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D50FABB7282BA3C100EC206D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D50FABB9282BA3C100EC206D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D50FABBB282BA3C100EC206D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D50FABBB282BA3C100EC206D /* TrainingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingViewController.swift; sourceTree = "<group>"; };
 		D50FABBE282BA3C100EC206D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D50FABC0282BA3C200EC206D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D50FABC3282BA3C200EC206D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D50FABC5282BA3C200EC206D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D50FABCB282BA48500EC206D /* BluetothManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetothManager.swift; sourceTree = "<group>"; };
+		D50FABCD282BA4BA00EC206D /* BluetoothConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothConstants.swift; sourceTree = "<group>"; };
+		D50FABCF282BA50B00EC206D /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		D50FABD1282BA56600EC206D /* AssemblyBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssemblyBuilder.swift; sourceTree = "<group>"; };
+		D50FABD3282BA5A700EC206D /* TrainingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingModel.swift; sourceTree = "<group>"; };
+		D50FABD5282BA5BE00EC206D /* TrainingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingViewModel.swift; sourceTree = "<group>"; };
+		D50FABDA282BA8C000EC206D /* RouterProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterProtocols.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +70,46 @@
 		D50FABB6282BA3C100EC206D /* HeartRateTracker */ = {
 			isa = PBXGroup;
 			children = (
+				D50FABD7282BA7CA00EC206D /* Routing */,
 				D50FABB7282BA3C100EC206D /* AppDelegate.swift */,
 				D50FABB9282BA3C100EC206D /* SceneDelegate.swift */,
-				D50FABBB282BA3C100EC206D /* ViewController.swift */,
+				D50FABBB282BA3C100EC206D /* TrainingViewController.swift */,
 				D50FABBD282BA3C100EC206D /* Main.storyboard */,
 				D50FABC0282BA3C200EC206D /* Assets.xcassets */,
 				D50FABC2282BA3C200EC206D /* LaunchScreen.storyboard */,
 				D50FABC5282BA3C200EC206D /* Info.plist */,
+				D50FABCB282BA48500EC206D /* BluetothManager.swift */,
+				D50FABCD282BA4BA00EC206D /* BluetoothConstants.swift */,
+				D50FABD1282BA56600EC206D /* AssemblyBuilder.swift */,
+				D50FABD3282BA5A700EC206D /* TrainingModel.swift */,
+				D50FABD5282BA5BE00EC206D /* TrainingViewModel.swift */,
 			);
 			path = HeartRateTracker;
+			sourceTree = "<group>";
+		};
+		D50FABD7282BA7CA00EC206D /* Routing */ = {
+			isa = PBXGroup;
+			children = (
+				D50FABD8282BA87900EC206D /* RouterProtocol */,
+				D50FABD9282BA89E00EC206D /* Router */,
+			);
+			path = Routing;
+			sourceTree = "<group>";
+		};
+		D50FABD8282BA87900EC206D /* RouterProtocol */ = {
+			isa = PBXGroup;
+			children = (
+				D50FABDA282BA8C000EC206D /* RouterProtocols.swift */,
+			);
+			path = RouterProtocol;
+			sourceTree = "<group>";
+		};
+		D50FABD9282BA89E00EC206D /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				D50FABCF282BA50B00EC206D /* Router.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +183,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D50FABBC282BA3C100EC206D /* ViewController.swift in Sources */,
+				D50FABCE282BA4BA00EC206D /* BluetoothConstants.swift in Sources */,
+				D50FABBC282BA3C100EC206D /* TrainingViewController.swift in Sources */,
+				D50FABD6282BA5BE00EC206D /* TrainingViewModel.swift in Sources */,
 				D50FABB8282BA3C100EC206D /* AppDelegate.swift in Sources */,
+				D50FABD4282BA5A700EC206D /* TrainingModel.swift in Sources */,
+				D50FABCC282BA48500EC206D /* BluetothManager.swift in Sources */,
+				D50FABDB282BA8C000EC206D /* RouterProtocols.swift in Sources */,
+				D50FABD0282BA50B00EC206D /* Router.swift in Sources */,
+				D50FABD2282BA56600EC206D /* AssemblyBuilder.swift in Sources */,
 				D50FABBA282BA3C100EC206D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
