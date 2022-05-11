@@ -13,6 +13,6 @@ protocol RouterMainProtocol {
 }
 
 protocol RouterProtocol: RouterMainProtocol {
-    func initialViewController(bluetoothManager: BluetoothManagerProtocol)
+    func initialViewController()
 }
     

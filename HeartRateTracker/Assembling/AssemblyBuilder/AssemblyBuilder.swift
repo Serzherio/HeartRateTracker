@@ -7,7 +7,11 @@
 
 import UIKit
 
-
+// Class AssembyBuilder comfirm AssembyProtocol
+// Build and inject dependencies in modules
+// Funcs:
+    // createTrainingModule:
+        // DI:  view, bluetoothManager, trainingViewModel
 class AssembyBuilder: AssembyProtocol {
     func createTrainingModule(router: RouterProtocol) -> UIViewController {
         let view = TrainingViewController()
@@ -17,6 +21,4 @@ class AssembyBuilder: AssembyProtocol {
         view.trainingViewModel = trainingViewModel
         return view
     }
-    
-    
 }
