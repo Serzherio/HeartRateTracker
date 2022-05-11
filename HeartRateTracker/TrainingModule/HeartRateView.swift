@@ -66,15 +66,39 @@ class HeartRateView: UIView {
             heartRateImageView.centerYAnchor.constraint(equalTo: centerYAnchor),
             heartRateImageView.widthAnchor.constraint(equalToConstant: 300),
             heartRateImageView.heightAnchor.constraint(equalToConstant: 300),
-//            arrowImageView.centerXAnchor.constraint(equalTo: centerXAnchor),
-//            arrowImageView.centerYAnchor.constraint(equalTo: centerYAnchor),
+            arrowImageView.centerXAnchor.constraint(equalTo: centerXAnchor),
+            arrowImageView.centerYAnchor.constraint(equalTo: centerYAnchor),
+            arrowImageView.heightAnchor.constraint(equalToConstant: 260),
+            arrowImageView.widthAnchor.constraint(equalToConstant: 45),
             heartRateLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
-            heartRateLabel.bottomAnchor.constraint(equalTo: heartRateImageView.bottomAnchor, constant: -50),
+            heartRateLabel.bottomAnchor.constraint(equalTo: heartRateImageView.bottomAnchor, constant: -20),
         ])
     }
     
     private func update(trainData: Train.TrainData, isHidden: Bool) {
-        heartRateLabel.text = String(trainData.trainHeartRate)
-       // heartRateLabel.isHidden = isHidden
+        let bpm = trainData.trainHeartRate
+        heartRateLabel.text = String(bpm)
+        BPMtoDegree(heartRate: bpm)
+        
     }
+    
+    func BPMtoDegree(heartRate: Int) {
+        var angle: CGFloat
+        if heartRate < 70 {
+            angle = CGFloat( Double(70-140) * (Double.pi/80) )
+        } else if heartRate > 210 {
+            angle = CGFloat( Double(210-140) * (Double.pi/80) )
+        } else {
+            angle = CGFloat( Double(heartRate-140) * (Double.pi/80) )
+        }
+        rotateImage(rotationAngle: angle)
+    }
+    
+    func rotateImage(rotationAngle: CGFloat) {
+        UIView.animate(withDuration: 1, delay: 0, options: .curveLinear, animations: { [self] () -> Void in
+//            setAnchorPoint(CGPoint(x: 0.5, y: 0.86), for: arrowImage)
+            self.arrowImageView.transform = CGAffineTransform(rotationAngle: rotationAngle)
+        })
+    }
+    
 }

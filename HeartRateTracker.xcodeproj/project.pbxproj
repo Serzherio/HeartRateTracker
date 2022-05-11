@@ -23,7 +23,6 @@
 		D50FABE0282BAB1300EC206D /* AssembyProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50FABDF282BAB1300EC206D /* AssembyProtocol.swift */; };
 		D50FABEB282C120500EC206D /* BluetoothManagerProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50FABEA282C120500EC206D /* BluetoothManagerProtocols.swift */; };
 		D50FABED282C17C100EC206D /* HeartRateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50FABEC282C17C100EC206D /* HeartRateView.swift */; };
-		D50FABEF282C3BBB00EC206D /* HeartRateView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50FABEE282C3BBB00EC206D /* HeartRateView + Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,7 +44,6 @@
 		D50FABDF282BAB1300EC206D /* AssembyProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssembyProtocol.swift; sourceTree = "<group>"; };
 		D50FABEA282C120500EC206D /* BluetoothManagerProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothManagerProtocols.swift; sourceTree = "<group>"; };
 		D50FABEC282C17C100EC206D /* HeartRateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartRateView.swift; sourceTree = "<group>"; };
-		D50FABEE282C3BBB00EC206D /* HeartRateView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HeartRateView + Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,7 +180,6 @@
 				D50FABE2282C0F5400EC206D /* View */,
 				D50FABE4282C0F6200EC206D /* ViewModel */,
 				D50FABEC282C17C100EC206D /* HeartRateView.swift */,
-				D50FABEE282C3BBB00EC206D /* HeartRateView + Extension.swift */,
 			);
 			path = TrainingModule;
 			sourceTree = "<group>";
@@ -296,7 +293,6 @@
 				D50FABD6282BA5BE00EC206D /* TrainingViewModel.swift in Sources */,
 				D50FABB8282BA3C100EC206D /* AppDelegate.swift in Sources */,
 				D50FABD4282BA5A700EC206D /* TrainingModel.swift in Sources */,
-				D50FABEF282C3BBB00EC206D /* HeartRateView + Extension.swift in Sources */,
 				D50FABCC282BA48500EC206D /* BluetothManager.swift in Sources */,
 				D50FABDB282BA8C000EC206D /* RouterProtocols.swift in Sources */,
 				D50FABED282C17C100EC206D /* HeartRateView.swift in Sources */,
