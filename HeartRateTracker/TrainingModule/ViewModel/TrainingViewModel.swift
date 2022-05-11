@@ -19,6 +19,9 @@ class TrainingViewModel: TrainingViewModelProtocol {
     var bluetoothManager: BluetoothManagerProtocol?
     var updateViewData: ((Train) -> ())?
     
+    init() {
+        updateViewData?(.notConnected)
+    }
     func startTraning() {
         bluetoothManager?.startConnectToDevice()
         bluetoothManager?.delegate = self
@@ -34,6 +37,7 @@ extension TrainingViewModel: UpdateHeartRateValueProtocol {
     
     func getHeartRateValue(bpm: Int) {
         print(bpm)
+        updateViewData?(.connected(Train.TrainData(trainHeartRate: bpm)))
     }
     
 }

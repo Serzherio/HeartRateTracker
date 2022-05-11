@@ -7,14 +7,11 @@
 
 import Foundation
 
-class Train {
-    let trainDate: Date
-    let trainDuring: Int
-    let trainHeartRate: [Int]?
+enum Train {
+    case notConnected
+    case connected(TrainData)
     
-    init(trainDate: Date, trainDuring: Int, trainHeartRate: [Int]?) {
-        self.trainDate = trainDate
-        self.trainDuring = trainDuring
-        self.trainHeartRate = trainHeartRate
+    struct TrainData {
+        let trainHeartRate: Int
     }
 }

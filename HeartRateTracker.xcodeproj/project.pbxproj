@@ -21,6 +21,9 @@
 		D50FABD6282BA5BE00EC206D /* TrainingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50FABD5282BA5BE00EC206D /* TrainingViewModel.swift */; };
 		D50FABDB282BA8C000EC206D /* RouterProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50FABDA282BA8C000EC206D /* RouterProtocols.swift */; };
 		D50FABE0282BAB1300EC206D /* AssembyProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50FABDF282BAB1300EC206D /* AssembyProtocol.swift */; };
+		D50FABEB282C120500EC206D /* BluetoothManagerProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50FABEA282C120500EC206D /* BluetoothManagerProtocols.swift */; };
+		D50FABED282C17C100EC206D /* HeartRateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50FABEC282C17C100EC206D /* HeartRateView.swift */; };
+		D50FABEF282C3BBB00EC206D /* HeartRateView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50FABEE282C3BBB00EC206D /* HeartRateView + Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +43,9 @@
 		D50FABD5282BA5BE00EC206D /* TrainingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingViewModel.swift; sourceTree = "<group>"; };
 		D50FABDA282BA8C000EC206D /* RouterProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterProtocols.swift; sourceTree = "<group>"; };
 		D50FABDF282BAB1300EC206D /* AssembyProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssembyProtocol.swift; sourceTree = "<group>"; };
+		D50FABEA282C120500EC206D /* BluetoothManagerProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothManagerProtocols.swift; sourceTree = "<group>"; };
+		D50FABEC282C17C100EC206D /* HeartRateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartRateView.swift; sourceTree = "<group>"; };
+		D50FABEE282C3BBB00EC206D /* HeartRateView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HeartRateView + Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,7 +145,8 @@
 		D50FABE1282C0CDA00EC206D /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				D50FABCB282BA48500EC206D /* BluetothManager.swift */,
+				D50FABE8282C11CC00EC206D /* Protocols */,
+				D50FABE9282C11D600EC206D /* Managers */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -174,6 +181,8 @@
 				D50FABE3282C0F5E00EC206D /* Model */,
 				D50FABE2282C0F5400EC206D /* View */,
 				D50FABE4282C0F6200EC206D /* ViewModel */,
+				D50FABEC282C17C100EC206D /* HeartRateView.swift */,
+				D50FABEE282C3BBB00EC206D /* HeartRateView + Extension.swift */,
 			);
 			path = TrainingModule;
 			sourceTree = "<group>";
@@ -193,6 +202,22 @@
 				D50FABB9282BA3C100EC206D /* SceneDelegate.swift */,
 			);
 			path = AppLifecycle;
+			sourceTree = "<group>";
+		};
+		D50FABE8282C11CC00EC206D /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				D50FABEA282C120500EC206D /* BluetoothManagerProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		D50FABE9282C11D600EC206D /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				D50FABCB282BA48500EC206D /* BluetothManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,9 +296,12 @@
 				D50FABD6282BA5BE00EC206D /* TrainingViewModel.swift in Sources */,
 				D50FABB8282BA3C100EC206D /* AppDelegate.swift in Sources */,
 				D50FABD4282BA5A700EC206D /* TrainingModel.swift in Sources */,
+				D50FABEF282C3BBB00EC206D /* HeartRateView + Extension.swift in Sources */,
 				D50FABCC282BA48500EC206D /* BluetothManager.swift in Sources */,
 				D50FABDB282BA8C000EC206D /* RouterProtocols.swift in Sources */,
+				D50FABED282C17C100EC206D /* HeartRateView.swift in Sources */,
 				D50FABD0282BA50B00EC206D /* Router.swift in Sources */,
+				D50FABEB282C120500EC206D /* BluetoothManagerProtocols.swift in Sources */,
 				D50FABE0282BAB1300EC206D /* AssembyProtocol.swift in Sources */,
 				D50FABD2282BA56600EC206D /* AssemblyBuilder.swift in Sources */,
 				D50FABBA282BA3C100EC206D /* SceneDelegate.swift in Sources */,

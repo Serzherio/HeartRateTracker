@@ -8,18 +8,6 @@
 import UIKit
 import CoreBluetooth
 
-protocol UpdateHeartRateValueProtocol {
-    func getHeartRateValue(bpm: Int)
-}
-
-
-protocol BluetoothManagerProtocol {
-    func startConnectToDevice()
-    func stopConnectToDevice()
-    var delegate: UpdateHeartRateValueProtocol? { get set }
-}
-
-
 class BluetoothManager: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate, BluetoothManagerProtocol {
     
     var centralManager: CBCentralManager!
