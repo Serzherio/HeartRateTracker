@@ -25,9 +25,9 @@ class Router: RouterProtocol {
     }
     
     
-    func initialViewController(bluetoothManager: BluetoothManagerProtocol) {
+    func initialViewController() {
         if let navigationController = navigationController {
-            guard let trainingViewController = assemblyBuilder?.createTrainingModule(router: self, bluetoothManager: bluetoothManager) else { return }
+            guard let trainingViewController = assemblyBuilder?.createTrainingModule(router: self) else { return }
             navigationController.viewControllers = [trainingViewController]
         }
     }

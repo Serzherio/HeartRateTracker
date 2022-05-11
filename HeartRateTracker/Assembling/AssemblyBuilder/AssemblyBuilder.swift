@@ -8,10 +8,6 @@
 
 import UIKit
 
-protocol AssembyProtocol: AnyObject {
-    func createTrainingModule(router: RouterProtocol, bluetoothManager: BluetoothManagerProtocol) -> UIViewController
-}
-
 class AssembyBuilder: AssembyProtocol {
     func createTrainingModule(router: RouterProtocol, bluetoothManager: BluetoothManagerProtocol) -> UIViewController {
         let view = TrainingViewController()

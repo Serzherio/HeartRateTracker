@@ -20,6 +20,7 @@
 		D50FABD4282BA5A700EC206D /* TrainingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50FABD3282BA5A700EC206D /* TrainingModel.swift */; };
 		D50FABD6282BA5BE00EC206D /* TrainingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50FABD5282BA5BE00EC206D /* TrainingViewModel.swift */; };
 		D50FABDB282BA8C000EC206D /* RouterProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50FABDA282BA8C000EC206D /* RouterProtocols.swift */; };
+		D50FABE0282BAB1300EC206D /* AssembyProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50FABDF282BAB1300EC206D /* AssembyProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		D50FABD3282BA5A700EC206D /* TrainingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingModel.swift; sourceTree = "<group>"; };
 		D50FABD5282BA5BE00EC206D /* TrainingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingViewModel.swift; sourceTree = "<group>"; };
 		D50FABDA282BA8C000EC206D /* RouterProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterProtocols.swift; sourceTree = "<group>"; };
+		D50FABDF282BAB1300EC206D /* AssembyProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssembyProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				D50FABD7282BA7CA00EC206D /* Routing */,
+				D50FABDC282BAAB500EC206D /* Assembling */,
 				D50FABB7282BA3C100EC206D /* AppDelegate.swift */,
 				D50FABB9282BA3C100EC206D /* SceneDelegate.swift */,
 				D50FABBB282BA3C100EC206D /* TrainingViewController.swift */,
@@ -80,7 +83,6 @@
 				D50FABC5282BA3C200EC206D /* Info.plist */,
 				D50FABCB282BA48500EC206D /* BluetothManager.swift */,
 				D50FABCD282BA4BA00EC206D /* BluetoothConstants.swift */,
-				D50FABD1282BA56600EC206D /* AssemblyBuilder.swift */,
 				D50FABD3282BA5A700EC206D /* TrainingModel.swift */,
 				D50FABD5282BA5BE00EC206D /* TrainingViewModel.swift */,
 			);
@@ -110,6 +112,31 @@
 				D50FABCF282BA50B00EC206D /* Router.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		D50FABDC282BAAB500EC206D /* Assembling */ = {
+			isa = PBXGroup;
+			children = (
+				D50FABDD282BAACD00EC206D /* AssemblyProtocols */,
+				D50FABDE282BAAFB00EC206D /* AssemblyBuilder */,
+			);
+			path = Assembling;
+			sourceTree = "<group>";
+		};
+		D50FABDD282BAACD00EC206D /* AssemblyProtocols */ = {
+			isa = PBXGroup;
+			children = (
+				D50FABDF282BAB1300EC206D /* AssembyProtocol.swift */,
+			);
+			path = AssemblyProtocols;
+			sourceTree = "<group>";
+		};
+		D50FABDE282BAAFB00EC206D /* AssemblyBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				D50FABD1282BA56600EC206D /* AssemblyBuilder.swift */,
+			);
+			path = AssemblyBuilder;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,6 +218,7 @@
 				D50FABCC282BA48500EC206D /* BluetothManager.swift in Sources */,
 				D50FABDB282BA8C000EC206D /* RouterProtocols.swift in Sources */,
 				D50FABD0282BA50B00EC206D /* Router.swift in Sources */,
+				D50FABE0282BAB1300EC206D /* AssembyProtocol.swift in Sources */,
 				D50FABD2282BA56600EC206D /* AssemblyBuilder.swift in Sources */,
 				D50FABBA282BA3C100EC206D /* SceneDelegate.swift in Sources */,
 			);
