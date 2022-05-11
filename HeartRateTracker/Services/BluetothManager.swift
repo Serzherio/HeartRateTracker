@@ -8,22 +8,33 @@
 import UIKit
 import CoreBluetooth
 
+protocol UpdateHeartRateValueProtocol {
+    func getHeartRateValue(bpm: Int)
+}
+
 
 protocol BluetoothManagerProtocol {
-    func startSearchingForBleDevice()
+    func startConnectToDevice()
+    func stopConnectToDevice()
+    var delegate: UpdateHeartRateValueProtocol? { get set }
 }
 
 
 class BluetoothManager: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate, BluetoothManagerProtocol {
-
+    
     var centralManager: CBCentralManager!
     var heartRatePeripheral: CBPeripheral!
+    var delegate: UpdateHeartRateValueProtocol?
     
-    func startSearchingForBleDevice() {
+    func startConnectToDevice() {
         centralManager = CBCentralManager(delegate: self, queue: nil)
         centralManager.scanForPeripherals(withServices: [heartRateServiceCBUUID])
     }
     
+    func stopConnectToDevice() {
+        centralManager.cancelPeripheralConnection(heartRatePeripheral)
+    }
+
     // States of centralManager
     func centralManagerDidUpdateState(_ central: CBCentralManager) {
         switch central.state {
@@ -59,7 +70,7 @@ class BluetoothManager: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate
         //  Discovery of specified peripheral device services
         //  Returns only those services that match the provided UUIDs for the search
         heartRatePeripheral.discoverServices([heartRateServiceCBUUID])
-    print("connected")
+        print("connected")
     }
     
     //  Notifies the delegate that peripheral service discovery was successful
@@ -93,9 +104,11 @@ class BluetoothManager: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate
     func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic,
                     error: Error?) {
             switch characteristic.uuid {
+                
             case heartRateMeasurementCharacteristicCBUUID:
                 let bpm = self.heartRate(from: characteristic)
-                print(bpm)
+                delegate?.getHeartRateValue(bpm: bpm)
+                
             default:
                 break
             }

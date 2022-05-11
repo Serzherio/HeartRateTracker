@@ -7,9 +7,7 @@
 
 import Foundation
 
-
 protocol TrainingViewModelProtocol {
-    
     var updateViewData: ((Train) -> ())? {get set}
     var bluetoothManager: BluetoothManagerProtocol? {get set}
     func startTraning()
@@ -22,11 +20,20 @@ class TrainingViewModel: TrainingViewModelProtocol {
     var updateViewData: ((Train) -> ())?
     
     func startTraning() {
-        bluetoothManager?.startSearchingForBleDevice()
+        bluetoothManager?.startConnectToDevice()
+        bluetoothManager?.delegate = self
     }
     
     func stopTrainig() {
-        
+        bluetoothManager?.stopConnectToDevice()
+    }
+    
+}
+
+extension TrainingViewModel: UpdateHeartRateValueProtocol {
+    
+    func getHeartRateValue(bpm: Int) {
+        print(bpm)
     }
     
 }

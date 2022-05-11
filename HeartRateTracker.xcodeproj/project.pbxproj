@@ -72,19 +72,16 @@
 		D50FABB6282BA3C100EC206D /* HeartRateTracker */ = {
 			isa = PBXGroup;
 			children = (
+				D50FABE7282C0FA500EC206D /* AppLifecycle */,
 				D50FABD7282BA7CA00EC206D /* Routing */,
 				D50FABDC282BAAB500EC206D /* Assembling */,
-				D50FABB7282BA3C100EC206D /* AppDelegate.swift */,
-				D50FABB9282BA3C100EC206D /* SceneDelegate.swift */,
-				D50FABBB282BA3C100EC206D /* TrainingViewController.swift */,
+				D50FABE5282C0F7100EC206D /* TrainingModule */,
+				D50FABE1282C0CDA00EC206D /* Services */,
+				D50FABE6282C0F8F00EC206D /* Constants */,
 				D50FABBD282BA3C100EC206D /* Main.storyboard */,
 				D50FABC0282BA3C200EC206D /* Assets.xcassets */,
 				D50FABC2282BA3C200EC206D /* LaunchScreen.storyboard */,
 				D50FABC5282BA3C200EC206D /* Info.plist */,
-				D50FABCB282BA48500EC206D /* BluetothManager.swift */,
-				D50FABCD282BA4BA00EC206D /* BluetoothConstants.swift */,
-				D50FABD3282BA5A700EC206D /* TrainingModel.swift */,
-				D50FABD5282BA5BE00EC206D /* TrainingViewModel.swift */,
 			);
 			path = HeartRateTracker;
 			sourceTree = "<group>";
@@ -137,6 +134,65 @@
 				D50FABD1282BA56600EC206D /* AssemblyBuilder.swift */,
 			);
 			path = AssemblyBuilder;
+			sourceTree = "<group>";
+		};
+		D50FABE1282C0CDA00EC206D /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D50FABCB282BA48500EC206D /* BluetothManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		D50FABE2282C0F5400EC206D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D50FABBB282BA3C100EC206D /* TrainingViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D50FABE3282C0F5E00EC206D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D50FABD3282BA5A700EC206D /* TrainingModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D50FABE4282C0F6200EC206D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D50FABD5282BA5BE00EC206D /* TrainingViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D50FABE5282C0F7100EC206D /* TrainingModule */ = {
+			isa = PBXGroup;
+			children = (
+				D50FABE3282C0F5E00EC206D /* Model */,
+				D50FABE2282C0F5400EC206D /* View */,
+				D50FABE4282C0F6200EC206D /* ViewModel */,
+			);
+			path = TrainingModule;
+			sourceTree = "<group>";
+		};
+		D50FABE6282C0F8F00EC206D /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				D50FABCD282BA4BA00EC206D /* BluetoothConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		D50FABE7282C0FA500EC206D /* AppLifecycle */ = {
+			isa = PBXGroup;
+			children = (
+				D50FABB7282BA3C100EC206D /* AppDelegate.swift */,
+				D50FABB9282BA3C100EC206D /* SceneDelegate.swift */,
+			);
+			path = AppLifecycle;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
