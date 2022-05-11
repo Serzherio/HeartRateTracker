@@ -7,6 +7,7 @@
 
 import UIKit
 
+// protocol for build App modules
 protocol AssembyProtocol: AnyObject {
-    func createTrainingModule(router: RouterProtocol, bluetoothManager: BluetoothManagerProtocol) -> UIViewController
+    func createTrainingModule(router: RouterProtocol) -> UIViewController
 }
