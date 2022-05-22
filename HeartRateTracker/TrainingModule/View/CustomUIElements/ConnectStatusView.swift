@@ -34,12 +34,12 @@ class ConnectStatusView: UIView {
         
         switch trainData {
         case .notConnected:
-            print("1")
-           // self.deviceStatusLabel.text = "Not connected"
-           // self.deviceStatusLabel.textColor = .cyan
-           // self.deviceSwitcher.isOn = false
+            self.deviceStatusLabel.text = "Not connected"
+            self.deviceStatusLabel.textColor = .cyan
+            self.deviceSwitcher.isOn = false
+        case .searching:
+            self.deviceStatusLabel.text = "Searching"
         case .connected(_):
-            print("3")
             self.deviceStatusLabel.text = "Connected"
             self.deviceStatusLabel.textColor = .green
             self.deviceSwitcher.isOn = true

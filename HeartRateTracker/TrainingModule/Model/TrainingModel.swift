@@ -9,6 +9,7 @@ import Foundation
 
 enum Train {
     case notConnected
+    case searching
     case connected(TrainData)
     
     struct TrainData {
