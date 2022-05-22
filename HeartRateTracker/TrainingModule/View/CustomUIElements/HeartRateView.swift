@@ -37,8 +37,13 @@ class HeartRateView: UIView {
         
         switch trainData {
         case .notConnected:
+            self.layer.opacity = 0.2
             update(trainData: Train.TrainData(trainHeartRate: 0), isHidden: false)
         case .connected(let trainData):
+            
+            UIView.animate(withDuration: 1) {
+                self.layer.opacity = 1
+            }
             update(trainData: trainData, isHidden: false)
         }
     }
