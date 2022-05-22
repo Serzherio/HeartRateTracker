@@ -26,6 +26,7 @@
 		D557763A282CE272007C87D5 /* UILabel + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5577639282CE272007C87D5 /* UILabel + Extension.swift */; };
 		D557763C282CEBC5007C87D5 /* UIFont + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D557763B282CEBC5007C87D5 /* UIFont + Extension.swift */; };
 		D5577640282CF209007C87D5 /* HeartRateView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D557763F282CF209007C87D5 /* HeartRateView + Extension.swift */; };
+		D5D742C3283A322E00895620 /* ConnectStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5D742C2283A322E00895620 /* ConnectStatusView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		D5577639282CE272007C87D5 /* UILabel + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel + Extension.swift"; sourceTree = "<group>"; };
 		D557763B282CEBC5007C87D5 /* UIFont + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont + Extension.swift"; sourceTree = "<group>"; };
 		D557763F282CF209007C87D5 /* HeartRateView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HeartRateView + Extension.swift"; sourceTree = "<group>"; };
+		D5D742C2283A322E00895620 /* ConnectStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectStatusView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,8 +161,8 @@
 		D50FABE2282C0F5400EC206D /* View */ = {
 			isa = PBXGroup;
 			children = (
-				D557763E282CEC7A007C87D5 /* CustomUIElements */,
 				D50FABBB282BA3C100EC206D /* TrainingViewController.swift */,
+				D557763E282CEC7A007C87D5 /* CustomUIElements */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -238,6 +240,7 @@
 			children = (
 				D50FABEC282C17C100EC206D /* HeartRateView.swift */,
 				D557763F282CF209007C87D5 /* HeartRateView + Extension.swift */,
+				D5D742C2283A322E00895620 /* ConnectStatusView.swift */,
 			);
 			path = CustomUIElements;
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 				D50FABCE282BA4BA00EC206D /* BluetoothConstants.swift in Sources */,
 				D50FABBC282BA3C100EC206D /* TrainingViewController.swift in Sources */,
 				D50FABD6282BA5BE00EC206D /* TrainingViewModel.swift in Sources */,
+				D5D742C3283A322E00895620 /* ConnectStatusView.swift in Sources */,
 				D50FABB8282BA3C100EC206D /* AppDelegate.swift in Sources */,
 				D50FABD4282BA5A700EC206D /* TrainingModel.swift in Sources */,
 				D50FABCC282BA48500EC206D /* BluetothManager.swift in Sources */,

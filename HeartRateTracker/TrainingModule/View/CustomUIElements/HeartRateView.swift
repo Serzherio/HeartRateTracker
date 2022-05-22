@@ -17,7 +17,7 @@ class HeartRateView: UIView {
     }
     lazy var heartRateImageView = UIImageView(image: UIImage(named: "WatchWithoutArrow"))
     lazy var arrowImageView = UIImageView(image: UIImage(named: "Arrow"))
-    lazy var heartRateLabel = UILabel(textLabel: "0", font: .noteworthy50())
+    lazy var heartRateLabel = UILabel(textLabel: "0", font: .noteworthy50(), textColor: .white)
     
     // Init HeartRateView
     init() {
@@ -41,7 +41,6 @@ class HeartRateView: UIView {
         case .connected(let trainData):
             update(trainData: trainData, isHidden: false)
         }
-        //customLayout()
     }
  
     private func update(trainData: Train.TrainData, isHidden: Bool) {

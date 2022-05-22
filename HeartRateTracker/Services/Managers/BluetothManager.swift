@@ -58,7 +58,7 @@ class BluetoothManager: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate
         //  Discovery of specified peripheral device services
         //  Returns only those services that match the provided UUIDs for the search
         heartRatePeripheral.discoverServices([heartRateServiceCBUUID])
-        print("connected")
+        delegate?.onConnected()
     }
     
     //  Notifies the delegate that peripheral service discovery was successful

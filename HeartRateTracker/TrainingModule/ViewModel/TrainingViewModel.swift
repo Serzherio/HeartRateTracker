@@ -9,15 +9,18 @@ import Foundation
 
 protocol TrainingViewModelProtocol {
     var updateViewData: ((Train) -> ())? {get set}
+    var updateDeviceStatus: ((Bool) -> ())? {get set}
     var bluetoothManager: BluetoothManagerProtocol? {get set}
     func startTraning()
     func stopTrainig()
 }
 
 class TrainingViewModel: TrainingViewModelProtocol {
-
+  
     var bluetoothManager: BluetoothManagerProtocol?
     var updateViewData: ((Train) -> ())?
+    var updateDeviceStatus: ((Bool) -> ())?
+    
     
     init() {
         updateViewData?(.notConnected)
@@ -29,14 +32,19 @@ class TrainingViewModel: TrainingViewModelProtocol {
     
     func stopTrainig() {
         bluetoothManager?.stopConnectToDevice()
+        updateViewData?(.notConnected)
     }
     
 }
 
 extension TrainingViewModel: UpdateHeartRateValueProtocol {
     
+    func onConnected() {
+        updateDeviceStatus?(true)
+    }
+    
+    
     func getHeartRateValue(bpm: Int) {
-        print(bpm)
         updateViewData?(.connected(Train.TrainData(trainHeartRate: bpm)))
     }
     

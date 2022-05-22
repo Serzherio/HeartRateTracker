@@ -9,6 +9,7 @@ import Foundation
 
 // Get bpm value from device
 protocol UpdateHeartRateValueProtocol {
+    func onConnected()
     func getHeartRateValue(bpm: Int)
 }
 
