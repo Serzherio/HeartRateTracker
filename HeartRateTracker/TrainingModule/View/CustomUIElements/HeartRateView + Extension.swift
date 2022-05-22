@@ -10,6 +10,7 @@ import UIKit
 extension HeartRateView {
     
     func customDesign() {
+        self.layer.opacity = 0.5
         heartRateLabel.font = .boldSystemFont(ofSize: 50)
         heartRateLabel.textColor = .white
     }

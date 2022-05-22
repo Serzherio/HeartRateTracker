@@ -66,11 +66,8 @@ class TrainingViewController: UIViewController {
     @objc private func deviceSwitcherPressed() {
         switch deviceStatusView.deviceSwitcher.isOn {
         case true:
-            deviceStatusView.deviceStatusLabel.text = "Searching"
             trainingViewModel?.startTraning()
         case false:
-            deviceStatusView.deviceStatusLabel.text = "Disconnected"
-            deviceStatusView.deviceStatusLabel.textColor = .cyan
             trainingViewModel?.stopTrainig()
         }
        

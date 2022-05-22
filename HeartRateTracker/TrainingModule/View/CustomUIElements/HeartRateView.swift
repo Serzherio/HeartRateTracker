@@ -37,13 +37,11 @@ class HeartRateView: UIView {
         
         switch trainData {
         case .notConnected:
-            self.layer.opacity = 0.2
+            UIView.animate(withDuration: 1) { self.layer.opacity = 0.5 }
             update(trainData: Train.TrainData(trainHeartRate: 0), isHidden: false)
+        case .searching:
+            UIView.animate(withDuration: 1) { self.layer.opacity = 1 }
         case .connected(let trainData):
-            
-            UIView.animate(withDuration: 1) {
-                self.layer.opacity = 1
-            }
             update(trainData: trainData, isHidden: false)
         }
     }
@@ -51,13 +49,13 @@ class HeartRateView: UIView {
     private func update(trainData: Train.TrainData, isHidden: Bool) {
         let bpm = trainData.trainHeartRate
         heartRateLabel.text = String(bpm)
-        RotateArrowByBPM(heartRate: bpm)
+        rotateArrowByBPM(heartRate: bpm)
         
     }
     
     // MARK: - Rotate view animations
     // Calculate rotate angle from BPM rate
-    private func RotateArrowByBPM(heartRate: Int) {
+    private func rotateArrowByBPM(heartRate: Int) {
         var angle: CGFloat
         if heartRate < 70 {
             angle = CGFloat( Double(70-140) * (Double.pi/80) )

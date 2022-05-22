@@ -26,6 +26,7 @@ class TrainingViewModel: TrainingViewModelProtocol {
         updateViewData?(.notConnected)
     }
     func startTraning() {
+        updateViewData?(.searching)
         bluetoothManager?.startConnectToDevice()
         bluetoothManager?.delegate = self
     }
